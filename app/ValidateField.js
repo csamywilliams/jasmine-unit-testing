@@ -15,15 +15,17 @@ const ValidateField = function () {
 
     telephoneNumberUK = function (phoneInput) {
 
-        var isValid = false;
+        let isValid = false;
 
-        if(phoneInput === undefined || phoneInput === null) {
+        if(typeof phoneInput === "undefined" || phoneInput === null) {
 
             return isValid;
 
         }
 
-        if(phoneInput.length > 0 && phoneInput.length === 11) {
+        let input = phoneInput.toString();
+
+        if(input.length > 0 && input.length === telephoneLengthUK) {
 
             isValid = true;
 
