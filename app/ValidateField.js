@@ -1,6 +1,8 @@
 
 const ValidateField = function () {
 
+    const telephoneLengthUK = 11;
+
     const emailAddress = function (emailInput) {
 
         let isValid = false,
@@ -11,8 +13,23 @@ const ValidateField = function () {
         return isValid;
     },
 
-    telephoneNumberUK = function () {
-        return true;
+    telephoneNumberUK = function (phoneInput) {
+
+        var isValid = false;
+
+        if(phoneInput === undefined || phoneInput === null) {
+
+            return isValid;
+
+        }
+
+        if(phoneInput.length > 0 && phoneInput.length === 11) {
+
+            isValid = true;
+
+        }
+
+        return isValid;
     };
 
     return {
