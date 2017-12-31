@@ -10,4 +10,12 @@ describe("email address", function () {
 
     });
 
+    it("should be false", function () {
+
+        var out = email.validAddress();
+
+        expect(out).toBe(false);
+
+    });
+
 });   

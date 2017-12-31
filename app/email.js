@@ -2,7 +2,10 @@
 var Email = function () {
 
     var validAddress = function () {
-        return undefined;
+
+        var isValid = false;
+
+        return isValid;
     };
 
     return {
