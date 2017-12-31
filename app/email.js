@@ -1,9 +1,12 @@
 
-var Email = function () {
+const Email = function () {
 
-    var validAddress = function () {
+    const validAddress = function (emailInput) {
 
-        var isValid = false;
+        let isValid = false,
+            regExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            isValid = regExp.test(emailInput);
 
         return isValid;
     };
