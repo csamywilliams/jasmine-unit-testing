@@ -1,7 +1,7 @@
 
-const Email = function () {
+const ValidateField = function () {
 
-    const validAddress = function (emailInput) {
+    const emailAddress = function (emailInput) {
 
         let isValid = false,
             regExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -9,12 +9,17 @@ const Email = function () {
             isValid = regExp.test(emailInput);
 
         return isValid;
+    },
+
+    telephoneNumberUK = function () {
+        return true;
     };
 
     return {
-        validAddress: validAddress
+        emailAddress: emailAddress,
+        telephoneNumberUK: telephoneNumberUK
     };
 
 } () ; 
 
-module.exports = Email;
+module.exports = ValidateField;
